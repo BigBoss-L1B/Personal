@@ -331,7 +331,7 @@ h6 {
 
 .navmenu .dropdown a,
 .navmenu .dropdown a:focus {
-  color: --nav-dropdown-color;
+  color: var(--nav-dropdown-color);
 }
 
 .navmenu .dropdown a:hover,
@@ -457,9 +457,11 @@ h6 {
 --------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
-    transition-delay: 0 !important;
+    transition: all 0.5s ease-in-out; /* Thay đổi thuộc tính chuyển tiếp nếu cần */
+    transition-delay: 0s !important; /* Sử dụng đơn vị 's' cho giá trị thời gian */
   }
 }
+
 
 /*--------------------------------------------------------------
 # Global Page Titles & Breadcrumbs
