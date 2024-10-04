@@ -1269,6 +1269,14 @@ section,
   color: var(--accent-color);
 }
 
+.homework-list {
+  color: #dc3545; /* Bright red for prominence */
+  font-weight: bold; /* Make text bold */
+}
+.text-center-vertical {
+  vertical-align: middle;
+  text-align: center;
+}
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/

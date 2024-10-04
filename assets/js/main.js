@@ -275,7 +275,7 @@
     const row = document.createElement('tr');
     row.innerHTML = `
                 <td class="homework-list text-center-vertical">${item.name}</td>
-                <td class="w-auto text-center-vertical"><a href="${item.link}" class="btn custom-button mt-2 fw-bold">Xem bài tập</a></td>
+                <td class="w-auto text-center-vertical"><a href="${item.link}" class="btn  btn-success mt-2 fw-bold">Xem bài tập</a></td>
             `;
     tableBody.appendChild(row);
   });
