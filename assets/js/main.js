@@ -19,6 +19,7 @@
     headerToggleBtn.classList.toggle('bi-list');
     headerToggleBtn.classList.toggle('bi-x');
   }
+
   headerToggleBtn.addEventListener('click', headerToggle);
 
   /**
@@ -37,7 +38,7 @@
    * Toggle mobile nav dropdowns
    */
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
+    navmenu.addEventListener('click', function (e) {
       e.preventDefault();
       this.parentNode.classList.toggle('active');
       this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
@@ -65,6 +66,7 @@
       window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
     }
   }
+
   scrollTop.addEventListener('click', (e) => {
     e.preventDefault();
     window.scrollTo({
@@ -87,38 +89,39 @@
       mirror: false
     });
   }
+
   window.addEventListener('load', aosInit);
 
   /**
    * Init typed.js
    */
- /* const selectTyped = document.querySelector('.typed');
-  if (selectTyped) {
-    let typed_strings = selectTyped.getAttribute('data-typed-items');
-    typed_strings = typed_strings.split(',');
-    new Typed('.typed', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
+  /* const selectTyped = document.querySelector('.typed');
+   if (selectTyped) {
+     let typed_strings = selectTyped.getAttribute('data-typed-items');
+     typed_strings = typed_strings.split(',');
+     new Typed('.typed', {
+       strings: typed_strings,
+       loop: true,
+       typeSpeed: 100,
+       backSpeed: 50,
+       backDelay: 2000
+     });
+   }
+ */
+  const selectTypedElements = document.querySelectorAll('.typed');
+  if (selectTypedElements) {
+    selectTypedElements.forEach((element) => {
+      let typed_strings = element.getAttribute('data-typed-items');
+      typed_strings = typed_strings.split(',');
+      new Typed(element, {
+        strings: typed_strings,
+        loop: true,
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 2000
+      });
     });
   }
-*/
-const selectTypedElements = document.querySelectorAll('.typed');
-if (selectTypedElements) {
-  selectTypedElements.forEach((element) => {
-    let typed_strings = element.getAttribute('data-typed-items');
-    typed_strings = typed_strings.split(',');
-    new Typed(element, {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
-    });
-  });
-}
 
   /**
    * Initiate Pure Counter
@@ -133,7 +136,7 @@ if (selectTypedElements) {
     new Waypoint({
       element: item,
       offset: '80%',
-      handler: function(direction) {
+      handler: function (direction) {
         let progress = item.querySelectorAll('.progress .progress-bar');
         progress.forEach(el => {
           el.style.width = el.getAttribute('aria-valuenow') + '%';
@@ -152,13 +155,13 @@ if (selectTypedElements) {
   /**
    * Init isotope layout and filters
    */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
+  document.querySelectorAll('.isotope-layout').forEach(function (isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
     let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
     let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
 
     let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
+    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function () {
       initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
         itemSelector: '.isotope-item',
         layoutMode: layout,
@@ -167,8 +170,8 @@ if (selectTypedElements) {
       });
     });
 
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
+    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function (filters) {
+      filters.addEventListener('click', function () {
         isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
         this.classList.add('filter-active');
         initIsotope.arrange({
@@ -186,9 +189,9 @@ if (selectTypedElements) {
    * Init swiper sliders
    */
   function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
+    document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
       let config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim()
+          swiperElement.querySelector(".swiper-config").innerHTML.trim()
       );
 
       if (swiperElement.classList.contains("swiper-tab")) {
@@ -204,7 +207,7 @@ if (selectTypedElements) {
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
-  window.addEventListener('load', function(e) {
+  window.addEventListener('load', function (e) {
     if (window.location.hash) {
       if (document.querySelector(window.location.hash)) {
         setTimeout(() => {
@@ -238,7 +241,65 @@ if (selectTypedElements) {
       }
     })
   }
+
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+
+    document.addEventListener('DOMContentLoaded', function () {
+    const homeworkData = [
+  {name: 'EmailList', link: 'https://firstdemo-ex01.azurewebsites.net/'},
+  {name: 'Survey', link: 'https://emaillist-ex02.azurewebsites.net/'},
+  {name: 'Bài tập 5.1', link: 'https://emaillist-ex5-1.azurewebsites.net/'},
+  {name: 'Bài tập 5.2', link: 'https://emaillistex5-2.azurewebsites.net/'},
+  {name: 'Bài tập 6.1', link: 'https://baitap6a-fpambrgkg4gubkg4.eastasia-01.azurewebsites.net/'},
+  {name: 'Bài tập 6.2', link: 'https://baitap6b-gugcd4gxh2emcra0.eastasia-01.azurewebsites.net/'},
+  {name: 'Bài tập 8.1', link: 'https://baitap8-dpbugheqbzbpbcdq.eastasia-01.azurewebsites.net/'},
+  {name: 'Bài tập 9.1', link: 'https://baitap9a.azurewebsites.net/'},
+  {name: 'Bài tập 9.2', link: 'https://baitap9b.azurewebsites.net/'},
+  {name: 'Bài tập C7', link: 'https://baitapc7.azurewebsites.net/'}
+    ];
+
+    const itemsPerPage = 5;
+    let currentPage = 1;
+
+    function displayTablePage(page) {
+    const tableBody = document.querySelector('#homework-table tbody');
+    tableBody.innerHTML = '';
+
+    const startIdx = (page - 1) * itemsPerPage;
+    const endIdx = startIdx + itemsPerPage;
+    const pageItems = homeworkData.slice(startIdx, endIdx);
+
+    pageItems.forEach(item => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+                <td class="homework-list text-center-vertical">${item.name}</td>
+                <td class="w-auto text-center-vertical"><a href="${item.link}" class="btn custom-button mt-2 fw-bold">Xem bài tập</a></td>
+            `;
+    tableBody.appendChild(row);
+  });
+  }
+
+    function setupPaginationButtons() {
+    const paginationContainer = document.querySelector('#pagination-buttons');
+    paginationContainer.innerHTML = '';
+
+    const numPages = Math.ceil(homeworkData.length / itemsPerPage);
+    for (let i = 1; i <= numPages; i++) {
+    const button = document.createElement('button');
+    button.textContent = i;
+    button.classList.add('btn', 'mx-1', 'custom-light-gray-button'); // Sử dụng màu trắng ngả xám tùy chỉnh
+    button.addEventListener('click', function () {
+    currentPage = i;
+    displayTablePage(currentPage);
+  });
+    paginationContainer.appendChild(button);
+  }
+  }
+
+    // Khởi tạo bảng và nút phân trang
+    displayTablePage(currentPage);
+    setupPaginationButtons();
+  });
 })();
