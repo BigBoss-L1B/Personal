@@ -248,16 +248,19 @@
 
     document.addEventListener('DOMContentLoaded', function () {
     const homeworkData = [
-  {name: 'EmailList', link: 'https://firstdemo-ex01.azurewebsites.net/'},
-  {name: 'Survey', link: 'https://emaillist-ex02.azurewebsites.net/'},
-  {name: 'Bài tập 5.1', link: 'https://emaillist-ex5-1.azurewebsites.net/'},
-  {name: 'Bài tập 5.2', link: 'https://emaillistex5-2.azurewebsites.net/'},
-  {name: 'Bài tập 6.1', link: 'https://baitap6a-fpambrgkg4gubkg4.eastasia-01.azurewebsites.net/'},
-  {name: 'Bài tập 6.2', link: 'https://baitap6b-gugcd4gxh2emcra0.eastasia-01.azurewebsites.net/'},
-  {name: 'Bài tập 8.1', link: 'https://baitap8-dpbugheqbzbpbcdq.eastasia-01.azurewebsites.net/'},
-  {name: 'Bài tập 9.1', link: 'https://baitap9a.azurewebsites.net/'},
-  {name: 'Bài tập 9.2', link: 'https://baitap9b.azurewebsites.net/'},
-  {name: 'Bài tập C7', link: 'https://baitapc7.azurewebsites.net/'}
+      {name: 'EmailList', link: 'https://firstdemo-ex01.azurewebsites.net/'},
+      {name: 'Survey', link: 'https://emaillist-ex02.azurewebsites.net/'},
+      {name: 'Bài tập 5.1', link: 'https://emaillist-ex5-1.azurewebsites.net/'},
+      {name: 'Bài tập 5.2', link: 'https://emaillistex5-2.azurewebsites.net/'},
+      {name: 'Bài tập 6.1', link: 'https://baitap6-1.azurewebsites.net/'},
+      {name: 'Bài tập 6.2', link: 'https://baitap6-2.azurewebsites.net/'},
+      {name: 'Bài tập 8.1', link: 'https://baitap8-1.azurewebsites.net/'},
+      {name: 'Bài tập 9.1', link: 'https://baitap9-1.azurewebsites.net/'},
+      {name: 'Bài tập C7', link: 'https://baitapc-7.azurewebsites.net/'},
+      {name: 'Bài tập C12', link: 'https://baitapc-12.azurewebsites.net/'},
+      {name: 'Bài tập ConnectionPool', link: 'https://btconnectionpool.azurewebsites.net/'},
+      {name: 'Bài tập Murach_JPA', link: 'https://murach-jpa.azurewebsites.net/'},
+      {name: 'Bài tập JavaMail', link: 'https://java-mail.azurewebsites.net/'}
     ];
 
     const itemsPerPage = 5;
