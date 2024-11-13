@@ -252,7 +252,7 @@
       {name: 'Survey', link: 'https://emaillist-ex02.azurewebsites.net/'},
       {name: 'Bài tập 5.1', link: 'https://emaillist-ex5-1.azurewebsites.net/'},
       {name: 'Bài tập 5.2', link: 'https://emaillist-ex5-2.azurewebsites.net/'},
-      {name: 'Bài tập 6.1', link: 'https://baitap6-1.azurewebsites.net/'},
+      {name: 'Bài tập 6.1', link: 'https://baitap6a.azurewebsites.net/'},
       {name: 'Bài tập 6.2', link: 'https://baitap6-2.azurewebsites.net/'},
       {name: 'Bài tập 8.1', link: 'https://exercise8-1.azurewebsites.net/'},
       {name: 'Bài tập 9.1', link: 'https://baitap9-1.azurewebsites.net/'},
